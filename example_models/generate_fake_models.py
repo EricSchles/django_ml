@@ -1,6 +1,6 @@
 import random
 from sklearn import linear_model
-from sklearn.externals import joblib
+import pickle
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
@@ -51,4 +51,4 @@ print("R^2", metrics.r2_score(y_test, y_pred))
 print("MSE:", metrics.mean_squared_error(y_test, y_pred))
 print("MAE:", metrics.mean_absolute_error(y_test, y_pred))
 
-joblib.dump(lin_reg, 'linear_regression_example.pkl')
+pickle.dump(lin_reg, open('linear_regression_example.pkl', "wb"))

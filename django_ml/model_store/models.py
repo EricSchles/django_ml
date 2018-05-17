@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class TrainedModels(models.Model):
-    picked_model = models.CharField(max_length=3000)
+    pickled_model = models.CharField(max_length=3000)
     model_parameters = models.CharField(max_length=1000)
     timestamp = models.DateTimeField()
     train_size = models.IntegerField()
